@@ -34,15 +34,10 @@ use `english` as the `data_rule` of name rules.
 | `vietnamese` | 37 last + 2,536 first names | Plain-text lists in `data-sample/vietnamese-people/raw/` (originally from <https://github.com/umbalaconmeogia/php-test-data/tree/master/src/vietnam>) |
 
 The generated CSVs are committed and are all the tool needs at runtime. The
-raw sources are converter input only — `data-sample/README.md` explains
-which raw files exist and why.
-
-The Japanese SQLite sources (~38 MB) are **not kept in git**. To regenerate
-the Japanese CSVs or the test data, download `test_data_japan.sqlite` /
-`test_data_demo.sqlite` from
-<https://github.com/umbalaconmeogia/yii2-test-data-japan/tree/master/demo/data>
-into `data-sample/japan-test-data/` first (the converter tools print these
-instructions if the files are missing).
+raw sources (Japanese SQLite files, Vietnamese text lists) are converter
+input only and are **not kept in git** — `data-sample/README.md` lists the
+download locations, and the converter tools print the same instructions when
+the files are missing.
 
 ## Regenerating / extending the bundled data
 

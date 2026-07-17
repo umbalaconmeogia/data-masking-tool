@@ -9,6 +9,7 @@ diacritics folded to ASCII, spaces removed, lowercased.
 import argparse
 import csv
 import os
+import sys
 import unicodedata
 
 
@@ -33,6 +34,13 @@ def main():
     parser.add_argument("--out", default=default_dir)
     args = parser.parse_args()
 
+    if not os.path.isfile(os.path.join(args.raw, "vietnamese-lastname.txt")):
+        sys.exit(
+            f"Source not found in: {args.raw}\n"
+            "This raw data is not kept in git. Download the name lists from\n"
+            "https://github.com/umbalaconmeogia/php-test-data/tree/master/src/vietnam\n"
+            "and place them in data-sample/vietnamese-people/raw/ (see data-sample/README.md)."
+        )
     os.makedirs(args.out, exist_ok=True)
 
     lastnames = read_names(os.path.join(args.raw, "vietnamese-lastname.txt"))

@@ -21,13 +21,21 @@ The remaining content is the raw material the CSVs were generated from. It is
 kept only so the CSVs can be regenerated or extended, and is never read by the
 masking tool itself:
 
-| Path | In git? | Used by |
-|------|---------|---------|
-| `vietnamese-people/raw/*.txt` | yes (tiny) | `script-python/tools/convert_vietnamese_name_data.py` |
-| `japan-test-data/*.sqlite` | **no** (.gitignored, ~38 MB) | `script-python/tools/convert_japan_name_data.py`, `script-python/tools/generate_test_data.py` |
+| Path | Used by |
+|------|---------|
+| `vietnamese-people/raw/*.txt` | `script-python/tools/convert_vietnamese_name_data.py` |
+| `japan-test-data/*.sqlite` | `script-python/tools/convert_japan_name_data.py`, `script-python/tools/generate_test_data.py` |
 
-The Vietnamese lists originally come from
-<https://github.com/umbalaconmeogia/php-test-data/tree/master/src/vietnam>.
+None of it is kept in git (all `.gitignore`d). If you need it:
+
+* Japanese: download `test_data_japan.sqlite` and `test_data_demo.sqlite` from
+  <https://github.com/umbalaconmeogia/yii2-test-data-japan/tree/master/demo/data>
+  into `data-sample/japan-test-data/`.
+* Vietnamese: download the name lists from
+  <https://github.com/umbalaconmeogia/php-test-data/tree/master/src/vietnam>
+  into `data-sample/vietnamese-people/raw/` (files
+  `vietnamese-lastname.txt`, `vietnamese-firstname-male.txt`,
+  `vietnamese-firstname-female.txt`).
 
 If you need the Japanese SQLite files (only to regenerate the Japanese CSVs or
 the test data, or for the planned `address` masking), download
