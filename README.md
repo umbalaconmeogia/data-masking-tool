@@ -42,7 +42,7 @@ python -m masking_tool --backup masking-backup.csv   # mask, keeping a mapping
 | `.env.example` | Example DB connection settings |
 | `data-sample/japanese-people/` | Japanese name pools (`lastname.csv`, `firstname.csv`: name, kana, romaji) |
 | `data-sample/vietnamese-people/` | Vietnamese name pools (same format; raw source lists in `raw/`) |
-| `data-sample/japan-test-data/` | Raw source SQLite databases (name/address data, demo DB) |
+| `data-sample/japan-test-data/` | Raw source SQLite databases — **not in git**, only needed to regenerate data (see `data-sample/README.md`) |
 | `script-python/` | Python implementation, converters and tests |
 | `script-php/` | PHP implementation (planned — shares all the same config/data formats) |
 | `docker/` | MySQL + PostgreSQL test containers preloaded with demo data |

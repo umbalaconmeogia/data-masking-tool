@@ -1,6 +1,9 @@
 .env
 masking-rule.csv
 masking-backup*.csv
+# Raw source data, only needed to regenerate the sample CSVs.
+# See data-sample/README.md for where to download it.
+data-sample/japan-test-data/
 __pycache__/
 *.pyc
 .venv/

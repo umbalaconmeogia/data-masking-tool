@@ -69,6 +69,13 @@ def main():
                         help="max rows per output file, 0 = no limit (default 5000)")
     args = parser.parse_args()
 
+    if not os.path.isfile(args.sqlite):
+        sys.exit(
+            f"Source not found: {args.sqlite}\n"
+            "This raw data is not kept in git. Download test_data_japan.sqlite from\n"
+            "https://github.com/umbalaconmeogia/yii2-test-data-japan/tree/master/demo/data\n"
+            "and place it in data-sample/japan-test-data/ (see data-sample/README.md)."
+        )
     os.makedirs(args.out, exist_ok=True)
     con = sqlite3.connect(args.sqlite)
     try:

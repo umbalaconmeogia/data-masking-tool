@@ -16,6 +16,7 @@ import csv
 import os
 import random
 import sqlite3
+import sys
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", ".."))
 SOURCE = os.path.join(ROOT, "data-sample", "japan-test-data", "test_data_demo.sqlite")
@@ -177,6 +178,13 @@ def write_sql(path, ddl, load_template):
 
 
 def main():
+    if not os.path.isfile(SOURCE):
+        sys.exit(
+            f"Source not found: {SOURCE}\n"
+            "This raw data is not kept in git. Download test_data_demo.sqlite from\n"
+            "https://github.com/umbalaconmeogia/yii2-test-data-japan/tree/master/demo/data\n"
+            "and place it in data-sample/japan-test-data/ (see data-sample/README.md)."
+        )
     companies, employees = load_source()
 
     os.makedirs(TEST_DATA_DIR, exist_ok=True)
