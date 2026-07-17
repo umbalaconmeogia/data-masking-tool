@@ -10,4 +10,6 @@ with the Python implementation, so no configuration change will be needed:
 * `data-sample/<locale>-people/lastname.csv` and `firstname.csv` — header `name,kana,romaji`.
 * Email patterns — `{placeholder}` tokens matched with the regex `\{([a-z_]+)\}`.
 
-See `script-python/README.md` for the full format specification.
+See the format specifications in [../docs/masking-rule.md](../docs/masking-rule.md),
+[../docs/configuration.md](../docs/configuration.md) and
+[../docs/sample-data.md](../docs/sample-data.md).

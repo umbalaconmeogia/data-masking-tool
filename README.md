@@ -25,9 +25,14 @@ python -m masking_tool --dry-run           # preview, writes nothing
 python -m masking_tool --backup masking-backup.csv   # mask, keeping a mapping
 ```
 
-See [script-python/README.md](script-python/README.md) for the full rule/format
-reference and CLI options, and [docker/README.md](docker/README.md) for a
-disposable MySQL/PostgreSQL playground preloaded with test data.
+## Documentation
+
+* [docs/masking-rule.md](docs/masking-rule.md) — rule file format: data types, data rules, email patterns, row consistency
+* [docs/configuration.md](docs/configuration.md) — `.env` connection settings and masking options
+* [docs/sample-data.md](docs/sample-data.md) — name pool format, adding locales, regenerating data
+* [script-python/README.md](script-python/README.md) — Python CLI options and tests
+* [docker/README.md](docker/README.md) — disposable MySQL/PostgreSQL playground preloaded with test data
+* [docs/requirement.md](docs/requirement.md) — original requirements
 
 ## Repository layout
 
