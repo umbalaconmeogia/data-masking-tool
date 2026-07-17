@@ -1,0 +1,16 @@
+table_name,column_name,data_type,data_rule
+employees,name,people_fullname,japanese
+employees,name_kana,people_fullname_kana,japanese
+employees,email,email,{firstname_romaji}.{lastname_romaji}.{row_id}@example.com
+employees,birthday,date,year_3
+employees,tel,tel,replace_all
+employees,fax,tel,replace_last_4
+companies,tel,tel,replace_all
+companies,fax,tel,replace_last_4
+# Additional patterns (for tables split into first/last name columns, or Vietnamese data):
+#customer,last_name,people_lastname,japanese
+#customer,first_name,people_firstname,japanese
+#customer,last_name_kana,people_lastname_kana,japanese
+#customer,first_name_kana,people_firstname_kana,japanese
+#member,full_name,people_fullname,vietnamese
+#member,email,email,{firstname_romaji}-{lastname_romaji}@example.test
